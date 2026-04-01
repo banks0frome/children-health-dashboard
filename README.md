@@ -1,6 +1,6 @@
 # Children's Health Dashboard
 
-AI-powered community health request management platform, built at the **Intermountain Health GenAI Hackathon** (March 2025, University of Utah).
+AI-powered community health request management platform, built at the **Intermountain Health GenAI Hackathon** (March 2026, University of Utah).
 
 **Live Demo:** https://children-health-dashboard.benson-tracy06.workers.dev
 
