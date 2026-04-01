@@ -1,0 +1,39 @@
+{
+  "name": "children-health-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:worker": "wrangler dev --port 8787",
+    "dev:all": "npm run dev:worker & npm run dev",
+    "build": "vite build",
+    "preview": "wrangler dev",
+    "deploy": "vite build && wrangler deploy",
+    "db:migrate:local": "wrangler d1 execute children-health-db --local --file=./migrations/001_init.sql",
+    "db:seed:local": "wrangler d1 execute children-health-db --local --file=./migrations/002_seed.sql",
+    "db:migrate:remote": "wrangler d1 execute children-health-db --remote --file=./migrations/001_init.sql",
+    "db:seed:remote": "wrangler d1 execute children-health-db --remote --file=./migrations/002_seed.sql"
+  },
+  "dependencies": {
+    "hono": "^4.7.0",
+    "lucide-react": "^0.577.0",
+    "nanoid": "^5.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.0.0",
+    "recharts": "^2.15.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250313.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.5.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "wrangler": "^4.0.0"
+  }
+}

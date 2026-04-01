@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/*
+ * Nurturing Narrative Design System
+ * Intermountain Children's Health brand identity
+ *
+ * Rules:
+ * - No borders: define boundaries through background color shifts
+ * - Pill shapes: rounded-full for CTAs, rounded-xl for cards
+ * - Tonal layering: elevation via surface tier shifts, not drop shadows
+ * - Ambient shadows: only for floating elements
+ * - No divider lines: separate with spacing or alternating tints
+ */
+
+@theme {
+  --color-primary: #3400a5;
+  --color-primary-container: #4a00e2;
+  --color-primary-light: #6b3fa0;
+  --color-secondary: #b80c5a;
+  --color-secondary-container: #ffe0ec;
+
+  --color-surface: #fcf8ff;
+  --color-surface-dim: #f6f1ff;
+  --color-surface-container: #f0eafc;
+  --color-surface-container-low: #f6f1ff;
+  --color-surface-container-high: #eae4f7;
+  --color-surface-container-highest: #e4dfff;
+  --color-surface-lowest: #ffffff;
+
+  --color-on-surface: #17085c;
+  --color-on-surface-muted: #534878;
+  --color-outline: #c9c3d9;
+
+  --color-status-submitted: #78716c;
+  --color-status-in-review: #d97706;
+  --color-status-approved: #16a34a;
+  --color-status-fulfilled: #3400a5;
+  --color-status-denied: #dc2626;
+
+  --color-type-mailing: #2563eb;
+  --color-type-event: #16a34a;
+  --color-type-both: #7c3aed;
+
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Be Vietnam Pro", sans-serif;
+
+  --shadow-ambient: 0 20px 40px rgba(23, 8, 92, 0.06);
+  --shadow-float: 0 8px 24px rgba(23, 8, 92, 0.1);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-on-surface-muted);
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode for ADA accessibility */
+.high-contrast {
+  --color-primary: #1a0066;
+  --color-primary-container: #2b00a3;
+  --color-secondary: #8b0040;
+  --color-surface: #ffffff;
+  --color-surface-dim: #f0f0f0;
+  --color-surface-container: #e0e0e0;
+  --color-surface-container-low: #f0f0f0;
+  --color-surface-container-high: #d0d0d0;
+  --color-surface-container-highest: #c0c0c0;
+  --color-surface-lowest: #ffffff;
+  --color-on-surface: #000000;
+  --color-on-surface-muted: #333333;
+  --color-outline: #666666;
+}
